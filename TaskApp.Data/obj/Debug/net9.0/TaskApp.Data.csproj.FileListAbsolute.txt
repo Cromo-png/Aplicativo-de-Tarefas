@@ -1,0 +1,14 @@
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\bin\Debug\net9.0\TaskApp.Data.deps.json
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\bin\Debug\net9.0\TaskApp.Data.runtimeconfig.json
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\bin\Debug\net9.0\TaskApp.Data.dll
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\bin\Debug\net9.0\TaskApp.Data.pdb
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\obj\Debug\net9.0\TaskApp.Data.csproj.AssemblyReference.cache
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\obj\Debug\net9.0\TaskApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\obj\Debug\net9.0\TaskApp.Data.AssemblyInfoInputs.cache
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\obj\Debug\net9.0\TaskApp.Data.AssemblyInfo.cs
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\obj\Debug\net9.0\TaskApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\obj\Debug\net9.0\TaskApp.Data.dll
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\obj\Debug\net9.0\refint\TaskApp.Data.dll
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\obj\Debug\net9.0\TaskApp.Data.pdb
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\obj\Debug\net9.0\TaskApp.Data.genruntimeconfig.cache
+C:\Users\cromo\OneDrive\Área de Trabalho\Coding\C#\Processo Seletivo ICAD\TaskApp3.0\TaskApp.Data\obj\Debug\net9.0\ref\TaskApp.Data.dll
