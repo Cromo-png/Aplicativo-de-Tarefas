@@ -1,0 +1,94 @@
+@model TaskApp.Web.Models.TaskListViewModel
+
+@{
+    ViewData["Title"] = "Lista de Tarefas";
+}
+
+<div class="container py-4">
+    <h1 class="mb-4">@ViewData["Title"]</h1>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <a asp-action="Create" class="btn btn-success">
+                <i class="bi bi-plus-circle"></i> Adicionar Nova Tarefa
+            </a>
+        </div>
+        <div class="col-md-6">
+            <form asp-action="Index" method="get" class="d-flex">
+                <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" class="form-control me-2" placeholder="Pesquisar por título ou descrição...">
+                <button type="submit" class="btn btn-primary me-2">Pesquisar</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Limpar</a>
+            </form>
+        </div>
+    </div>
+
+    @if (!Model.Tasks.Any())
+    {
+        <div class="alert alert-info">
+            <p>Nenhuma tarefa encontrada. Clique no botão acima para adicionar uma nova tarefa.</p>
+        </div>
+    }
+    else
+    {
+        <div class="accordion" id="tasksAccordion">
+            @foreach (var task in Model.Tasks)
+            {
+                <div class="accordion-item mb-3 border rounded @(task.IsCompleted ? "border-success" : "")">
+                    <h2 class="accordion-header" id="heading@(task.Id)">
+                        <div class="d-flex align-items-center p-3">
+                            <div class="form-check me-3">
+                                <form asp-action="ToggleComplete" asp-route-id="@task.Id" method="post" id="completeForm@(task.Id)">
+                                    <input class="form-check-input" type="checkbox" @(task.IsCompleted ? "checked" : "") 
+                                           onchange="document.getElementById('completeForm@(task.Id)').submit()" />
+                                </form>
+                            </div>
+                            <button class="accordion-button collapsed flex-grow-1 @(task.IsCompleted ? "text-decoration-line-through" : "")" 
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse@(task.Id)" 
+                                    aria-expanded="false" aria-controls="collapse@(task.Id)">
+                                @task.Title
+                                <span class="badge bg-primary ms-2">@task.Difficulty</span>
+                                <small class="ms-auto text-muted">Entrega: @task.DueDate.ToString("d")</small>
+                            </button>
+                        </div>
+                    </h2>
+                    <div id="collapse@(task.Id)" class="accordion-collapse collapse" aria-labelledby="heading@(task.Id)" data-bs-parent="#tasksAccordion">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5>Descrição</h5>
+                                    <p>@task.Description</p>
+                                    <h5>Detalhes</h5>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item"><strong>Data de Entrega:</strong> @task.DueDate.ToString("D")</li>
+                                        <li class="list-group-item"><strong>Responsável:</strong> @task.AssigneeName</li>
+                                        <li class="list-group-item"><strong>Status:</strong> @(task.IsCompleted ? "Concluída" : "Pendente")</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 d-flex flex-column">
+                                    <a asp-action="Edit" asp-route-id="@task.Id" class="btn btn-primary mb-2">
+                                        <i class="bi bi-pencil"></i> Editar
+                                    </a>
+                                    <form asp-action="Delete" asp-route-id="@task.Id" onsubmit="return confirm('Tem certeza que deseja excluir esta tarefa?');">
+                                        <button type="submit" class="btn btn-danger w-100">
+                                            <i class="bi bi-trash"></i> Excluir
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        // Habilitar tooltips do Bootstrap
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+} 

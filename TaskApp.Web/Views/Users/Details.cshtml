@@ -1,0 +1,40 @@
+@model TaskApp.Data.Models.User
+
+@{
+    ViewData["Title"] = "Detalhes do Usuário";
+}
+
+<div class="container py-4">
+    <h1 class="mb-4">@ViewData["Title"]</h1>
+    
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3>@Model.UserName</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <dl class="row">
+                        <dt class="col-sm-4">Nome de Usuário</dt>
+                        <dd class="col-sm-8">@Model.UserName</dd>
+                        
+                        <dt class="col-sm-4">Nome Completo</dt>
+                        <dd class="col-sm-8">@Model.FullName</dd>
+                        
+                        <dt class="col-sm-4">E-mail</dt>
+                        <dd class="col-sm-8">@Model.Email</dd>
+                        
+                        <dt class="col-sm-4">E-mail Confirmado</dt>
+                        <dd class="col-sm-8">@(Model.EmailConfirmed ? "Sim" : "Não")</dd>
+                        
+                        <dt class="col-sm-4">Bloqueio Habilitado</dt>
+                        <dd class="col-sm-8">@(Model.LockoutEnabled ? "Sim" : "Não")</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a asp-action="Index" class="btn btn-secondary">Voltar para a Lista</a>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,50 @@
+# Arquivos e pastas específicos do .NET Core
+bin/
+obj/
+.vs/
+*.user
+appsettings.Development.json
+
+# Banco de dados SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# Arquivos temporários
+*.tmp
+*.log
+*.swp
+*~
+
+# Arquivos de dependências
+packages/
+node_modules/
+
+# Arquivos de compilação
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+
+# Arquivos de usuário do Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vscode/
+
+# Arquivos de publicação
+*.pubxml
+*.publishproj
+
+# Outros
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+.idea/
+*.sln.iml
+.cr/ 
